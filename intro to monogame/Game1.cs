@@ -10,7 +10,7 @@ namespace intro_to_monogame
         private SpriteBatch _spriteBatch;
 
         Rectangle window;
-        Texture2D turtleTexture;
+        Texture2D backgroundTexture;
         Texture2D thwompTexture;
 
         public Game1()
@@ -36,7 +36,7 @@ namespace intro_to_monogame
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            turtleTexture = Content.Load<Texture2D>("turtle");
+            backgroundTexture = Content.Load<Texture2D>("background");
             thwompTexture = Content.Load<Texture2D>("thwomp");
 
             // TODO: use this.Content to load your game content here
@@ -57,7 +57,7 @@ namespace intro_to_monogame
             GraphicsDevice.Clear(Color.MonoGameOrange);
             _spriteBatch.Begin();
             
-            _spriteBatch.Draw(turtleTexture, new Vector2(67, 175), Color.White); 
+            _spriteBatch.Draw(background Texture, new Vector2(0, 0), Color.White); 
             _spriteBatch.Draw(turtleTexture, new Vector2(300, 120), Color.Black);
             _spriteBatch.Draw(turtleTexture, new Vector2(533, 67), Color.White);
             _spriteBatch.Draw(thwompTexture, new Vector2(128, 77), Color.Wheat);
